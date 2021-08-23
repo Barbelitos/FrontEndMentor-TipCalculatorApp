@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="stylesheets/main.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="logo">
+      <p>SPLI<br />TTER</p>
+    </div>
+
+    <div class="tip-calc">
+      <div class="input-values">
+        <div class="label"><label for="bill">Bill</label></div>
+        <input
+          class="bill"
+          type="number"
+          id="bill"
+          name="bill"
+          placeholder="0"
+        />
+        <div class="percentages-table">
+          <div class="percentage-button" value="5">5%</div>
+          <div class="percentage-button" value="10">10%</div>
+          <div class="percentage-button" value="15">15%</div>
+          <div class="percentage-button" value="25">25%</div>
+          <div class="percentage-button" value="50">50%</div>
+          <input
+            class="percentage-field"
+            type="text"
+            id="custom-percent"
+            placeholder="Custom"
+          />
+        </div>
+        <div class="label">
+          <label for="number-people">Number of People</label>
+        </div>
+        <input
+          class="people"
+          type="number"
+          id="number-people"
+          placeholder="0"
+        />
+      </div>
+      <div class="calc-results">
+        <div class="result">
+          <div class="text">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <h2>$0.00</h2>
+        </div>
+        <div class="result">
+          <div class="text">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <h2>$0.00</h2>
+        </div>
+        <button class="reset-button">Reset</button>
+      </div>
+    </div>
+
+    <!--
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset -->
+  </body>
+</html>
