@@ -32,11 +32,11 @@
           placeholder="0"
         />
         <div class="percentages-table">
-          <div class="percentage-button" value="5">5%</div>
-          <div class="percentage-button" value="10">10%</div>
-          <div class="percentage-button" value="15">15%</div>
-          <div class="percentage-button" value="25">25%</div>
-          <div class="percentage-button" value="50">50%</div>
+          <div class="percentage-button unselected" value="5">5%</div>
+          <div class="percentage-button unselected" value="10">10%</div>
+          <div class="percentage-button unselected" value="15">15%</div>
+          <div class="percentage-button unselected" value="25">25%</div>
+          <div class="percentage-button unselected" value="50">50%</div>
           <input
             class="percentage-field"
             type="text"
@@ -60,37 +60,19 @@
             <p>Tip Amount</p>
             <p>/ person</p>
           </div>
-          <h2>$0.00</h2>
+          <h2 class="tip-person">$0.00</h2>
         </div>
         <div class="result">
           <div class="text">
-            <p>Tip Amount</p>
+            <p>Total</p>
             <p>/ person</p>
           </div>
-          <h2>$0.00</h2>
+          <h2 class="total-person">$0.00</h2>
         </div>
         <button class="reset-button">Reset</button>
       </div>
     </div>
 
-    <!--
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset -->
+    <script src="./javascript/main.js"></script>
   </body>
 </html>
