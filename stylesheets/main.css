@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+:root {
+  /* Primary colors */
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral colors */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --white: hsl(0, 0%, 100%);
+}
+
 *,
 *:after,
 *:before {
@@ -10,7 +21,7 @@
 }
 
 body {
-  background-color: hsl(185, 41%, 84%);
+  background-color: var(--light-grayish-cyan);
   font-family: "Space Mono", monospace;
   font-size: 24px;
 }
@@ -18,18 +29,18 @@ body {
 .logo {
   text-align: center;
   margin-top: 5em;
-  color: hsl(183, 100%, 15%);
+  color: var(--very-dark-cyan);
   letter-spacing: 0.5em;
   font-weight: 700;
 }
 
 .tip-calc {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   width: 60%;
-  max-width: 700px;
-  margin: 50px auto;
+  max-width: 800px;
+  margin: 25px auto;
   border-radius: 12px;
   padding: 25px;
   gap: 1em;
@@ -72,13 +83,18 @@ input::placeholder {
   font-family: "Space Mono", monospace;
 }
 
+input:focus,
+input:hover {
+  border: 2px solid var(--strong-cyan);
+}
+
 .percentage-field {
   text-align: center;
 }
 
 .percentage-field::placeholder {
   text-align: center;
-  color: hsl(183, 100%, 15%);
+  color: var(--very-dark-cyan);
 }
 
 .bill {
@@ -95,6 +111,26 @@ input::placeholder {
   background-position-x: 10px;
 }
 
+.error,
+.error:hover,
+.error:focus {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.217);
+}
+
+.error-message {
+  color: red;
+}
+
+.bill-error,
+.people-error {
+  visibility: hidden;
+}
+
+.show-error {
+  visibility: visible;
+}
+
 .percentages-table {
   display: grid;
   grid-template-columns: 4fr 4fr 4fr;
@@ -103,29 +139,38 @@ input::placeholder {
 }
 
 .percentage-button {
-  background-color: hsl(183, 100%, 15%);
-  color: white;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
   text-align: center;
   height: 35px;
+  font-weight: 700;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.percentage-button:hover {
+  background-color: var(--light-grayish-cyan);
+  color: black;
 }
 
 .selected {
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
 }
 
 label {
   font-size: 12px;
-  color: hsl(183, 100%, 15%);
+  color: var(--very-dark-cyan);
   font-weight: 700;
+  display: flex;
+  justify-content: space-between;
 }
 
 .calc-results {
   width: 50%;
-  background-color: hsl(183, 100%, 15%);
+  background-color: var(--very-dark-cyan);
   border-radius: 12px;
   padding: 15px;
 }
@@ -140,11 +185,11 @@ label {
 .text p {
   font-size: 14px;
   margin: 0;
-  color: white;
+  color: var(--white);
 }
 
 h2 {
-  color: hsl(172, 67%, 45%);
+  color: var(--strong-cyan);
   margin: 0.2em 0;
 }
 
@@ -157,11 +202,31 @@ h2 {
   font-weight: 700;
   margin-top: 100px;
   cursor: pointer;
-  background-color: hsl(172, 67%, 45%);
-  color: hsl(183, 100%, 15%);
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
   transition: background 0.3s ease-in-out;
 }
 
 .reset-button:hover {
   background-color: hsl(172, 67%, 75%);
+}
+
+/* Mobile screens */
+@media screen and (max-width: 1000px) {
+  .logo {
+    margin-top: 2em;
+  }
+
+  .tip-calc {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .input-values {
+    width: 100%;
+  }
+
+  .calc-results {
+    width: 100%;
+  }
 }

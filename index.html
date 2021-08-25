@@ -23,13 +23,20 @@
 
     <div class="tip-calc">
       <div class="input-values">
-        <div class="label"><label for="bill">Bill</label></div>
+        <div class="label">
+          <label for="bill"
+            >Bill
+            <span class="bill-error error-message"
+              >Cannot be less than 0</span
+            ></label
+          >
+        </div>
         <input
           class="bill"
           type="number"
           id="bill"
           name="bill"
-          placeholder="0"
+          placeholder="00.00"
         />
         <div class="percentages-table">
           <button type="number" class="percentage-button unselected" value="5">
@@ -55,13 +62,18 @@
           />
         </div>
         <div class="label">
-          <label for="number-people">Number of People</label>
+          <label for="number-people"
+            >Number of People
+            <span class="people-error error-message"
+              >Has to be at least 1</span
+            ></label
+          >
         </div>
         <input
           class="people"
           type="number"
           id="number-people"
-          placeholder="0"
+          placeholder="1"
         />
       </div>
       <div class="calc-results">
